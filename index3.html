@@ -9,14 +9,24 @@
 </head>
 
 <body>
+    <!--題名-->
     <h1 style="text-align:center;">
         ～曲ガチャ～
     </h1>
+    <!--別ページリンク-->
+    <h1>
+        <a href="index2.html">
+            戻る
+        </a>
+    </h1>
+    <!--選曲ボタン-->
     <button onClick="B1()" style="width:128px; height:48px; font-size:20px">
         選曲
     </button>
     <script>
+        //選曲する機構
         var A1 = Math.floor(Math.random() * 24) + 1;
+        //曲
         if (A1 == 1) {
             document.write('<h2>2022年 10月 4日<br>1.NONE Song</h2><audio controls src="Music/1.mp3"><a href="Music/1.mp3">ダウンロード</a></audio><h2>最初の曲。</h2>');
         } else if (A1 == 2) {
@@ -66,6 +76,7 @@
         } else if (A1 == 24) {
             document.write('<h2>2023年 3月 31日<br>24.名無し</h2><audio controls src="Music/24.mp3"><a href="Music/24.mp3">ダウンロード</a></audio><h2>とある絵から着装を受けました。</h2>');
         };
+        //ボタンを押したらページをリロード
         function B1() {
             window.location.reload();
         };

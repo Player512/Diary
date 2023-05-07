@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>選曲ガチャ</title>
+    <title>ミニゲーム</title>
 </head>
 
 <body>
@@ -20,65 +20,66 @@
         </a>
     </h1>
     <!--選曲ボタン-->
-    <button onClick="B1()" style="width:128px; height:48px; font-size:20px">
+    <button onClick="A1()" style="width:128px; height:48px; font-size:20px">
         選曲
     </button>
+    <div id="B1"></div>
     <script>
-        //選曲する機構
-        var A1 = Math.floor(Math.random() * 24) + 1;
-        //曲
-        if (A1 == 1) {
-            document.write('<h2>2022年 10月 4日<br>1.NONE Song</h2><audio controls src="Music/1.mp3"><a href="Music/1.mp3">ダウンロード</a></audio><h2>最初の曲。</h2>');
-        } else if (A1 == 2) {
-            document.write('<h2>2022年 10月 5日<br>2.一週間</h2><audio controls src="Music/2.mp3"><a href="Music/2.mp3">ダウンロード</a></audio><h2>確かNONE Songより<br>後だったはず…</h2>');
-        } else if (A1 == 3) {
-            document.write('<h2>2022年 10月 6日<br>3.どことなく不思議な日</h2><audio controls src="Music/3.mp3"><a href="Music/3.mp3">ダウンロード</a></audio><h2>最初の頃は自信があった曲だったんですけど<br>今聞くとそうでもないなぁって()</h2>');
-        } else if (A1 == 4) {
-            document.write('<h2>2022年 11月 24…?日<br>4.中国拳法</h2><audio controls src="Music/4.mp3"><a href="Music/4.mp3">ダウンロード</a></audio><h2>これ個人的に結構好きですね。<br>Chinaって感じで。</h2>');
-        } else if (A1 == 5) {
-            document.write('<h2>2022年 11月 26日<br>5.アルファベット螺旋§</h2><audio controls src="Music/5.mp3"><a href="Music/5.mp3">ダウンロード</a></audio><h2>§はエスです。</h2>');
-        } else if (A1 == 6) {
-            document.write('<h2>2022年 12月 10日<br>6.陽気な神</h2><audio controls src="Music/6.mp3"><a href="Music/6.mp3">ダウンロード</a></audio><h2>何か良く分からんで作ったので<br>曲の構成とか結構ごちゃごちゃです。</h2>');
-        } else if (A1 == 7) {
-            document.write('<h2>2022年 12…月 14…??日<br>7.トラブルシューティング</h2><audio controls src="Music/7.mp3"><a href="Music/7.mp3">ダウンロード</a></audio><h2>マジでこれいつ作ったんだっけなぁ…</h2>');
-        } else if (A1 == 8) {
-            document.write('<h2>2022年 12月 17日<br>8.大決戦</h2><audio controls src="Music/8.mp3"><a href="Music/8.mp3">ダウンロード</a></audio><h2>これは学校の課題で<br>パッと作ったやつですね。<br>没になりましたが。</h2>');
-        } else if (A1 == 9) {
-            document.write('<h2>2022年 12月 20日<br>9.森林配達</h2><audio controls src="Music/9.mp3"><a href="Music/9.mp3">ダウンロード</a></audio><h2>これは学校の課題で作ったやつです。</h2>');
-        } else if (A1 == 10) {
-            document.write('<h2>2022年 12月 22日<br>10.和室トンネル</h2><audio controls src="Music/10.mp3"><a href="Music/10.mp3">ダウンロード</a></audio><h2>The Backroomsに<br>和服着た少女が落ちて来た<br>感じで作ったハズ…</h2>');
-        } else if (A1 == 11) {
-            document.write('<h2>2022年 12月 25…?日<br>11.大自然</h2><audio controls src="Music/11.mp3"><a href="Music/11.mp3">ダウンロード</a></audio><h2>かなり曲作りが億劫になってた時に作ったので<br>何か音がふにゃふにゃしてます。</h2>');
-        } else if (A1 == 12) {
-            document.write('<h2>2023年 1月 6日<br>12.跳ねる感情</h2><audio controls src="Music/12.mp3"><a href="Music/12.mp3">ダウンロード</a></audio><h2>ちょっと特殊な音源を使ってます。<br>(重音テトの「ん」って声。)</h2>');
-        } else if (A1 == 13) {
-            document.write('<h2>2023年 1月 7日<br>13.自然</h2><audio controls src="Music/13.mp3"><a href="Music/13.mp3">ダウンロード</a></audio><h2>どことなく不思議な日みたいな、メルヘンな曲をまた作りたかったんですが<br>どうにもメロディの作り方が分からなくて後半諦めたやつ。</h2>');
-        } else if (A1 == 14) {
-            document.write('<h2>2023年 1月 21日<br>14.データ消し飛んだ</h2><audio controls src="Music/14.mp3"><a href="Music/14.mp3">ダウンロード</a></audio><h2>作ってた曲めっちゃ良い感じだったのに<br>保存してなくて全部消えました。</h2>');
-        } else if (A1 == 15) {
-            document.write('<h2>2023年 1月 23日<br>15.フリースタイル俳句</h2><audio controls src="Music/15.mp3"><a href="Music/15.mp3">ダウンロード</a></audio><h2>俳句の授業をやったので、そこからネタを持ってきました。</h2>');
-        } else if (A1 == 16) {
-            document.write('<h2>2023年 1月 24日<br>16.ホントにそれで良いのかよw</h2><audio controls src="Music/16.mp3"><a href="Music/16.mp3">ダウンロード</a></audio><h2>タイトルが嘲笑されてる様で何か辛い。</h2>');
-        } else if (A1 == 17) {
-            document.write('<h2>2023年 2月 5日<br>17.都市開発</h2><audio controls src="Music/17.mp3"><a href="Music/17.mp3">ダウンロード</a></audio><h2>何か建物を地道に組み建ててる感じ。</h2>');
-        } else if (A1 == 18) {
-            document.write('<h2>2023年 2月 19日<br>18.突破不可能な草原</h2><audio controls src="Music/18.mp3"><a href="Music/18.mp3">ダウンロード</a></audio><h2>あ～…メロディが好きじゃ無いなぁ…</h2>');
-        } else if (A1 == 19) {
-            document.write('<h2>2023年 2月 23日<br>19.Level Reaper</h2><audio controls src="Music/19.mp3"><a href="Music/19.mp3">ダウンロード</a></audio><h2>ちょっと悲しめになりましたね。</h2>');
-        } else if (A1 == 20) {
-            document.write('<h2>2023年 2月 26日<br>20.暇なゲーム</h2><audio controls src="Music/20.mp3"><a href="Music/20.mp3">ダウンロード</a></audio><h2>ここら辺から似たような<br>曲調ばっかになってくる。</h2>');
-        } else if (A1 == 21) {
-            document.write('<h2>2023年 3月 27日<br>21.絶望</h2><audio controls src="Music/21.mp3"><a href="Music/21.mp3">ダウンロード</a></audio><h2>ちょっとホラーゲームとかにありそう</h2>');
-        } else if (A1 == 22) {
-            document.write('<h2>2023年 3月 28…?日<br>22.新しい風</h2><audio controls src="Music/22.mp3"><a href="Music/22.mp3">ダウンロード</a></audio><h2>進級祝い。</h2>');
-        } else if (A1 == 23) {
-            document.write('<h2>2023年 3月 29日<br>23.スプラッシュ!!!</h2><audio controls src="Music/23.mp3"><a href="Music/23.mp3">ダウンロード</a></audio><h2>とある絵から着装を受けました。</h2>');
-        } else if (A1 == 24) {
-            document.write('<h2>2023年 3月 31日<br>24.席替え</h2><audio controls src="Music/24.mp3"><a href="Music/24.mp3">ダウンロード</a></audio><h2>席替えした次の日絶対席間違えてた。</h2>');
-        };
-        //ボタンを押したらページをリロード
-        function B1() {
-            window.location.reload();
+        function A1() {
+            //選曲する機構
+            let C1 = Math.floor(Math.random() * 25) + 1;
+            //曲
+            if (C1 == 1) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 10月 4日<br>1.NONE Song</h2><audio controls src="Music/1.mp3"><a href="Music/1.mp3">ダウンロード</a></audio><h2>最初の曲。</h2>';
+            } else if (C1 == 2) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 10月 5日<br>2.一週間</h2><audio controls src="Music/2.mp3"><a href="Music/2.mp3">ダウンロード</a></audio><h2>確かNONE Songより<br>後だったはず…</h2>';
+            } else if (C1 == 3) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 10月 6日<br>3.どことなく不思議な日</h2><audio controls src="Music/3.mp3"><a href="Music/3.mp3">ダウンロード</a></audio><h2>最初の頃は自信があった曲だったんですけど<br>今聞くとそうでもないなぁって()</h2>';
+            } else if (C1 == 4) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 11月 24…?日<br>4.中国拳法</h2><audio controls src="Music/4.mp3"><a href="Music/4.mp3">ダウンロード</a></audio><h2>これ個人的に結構好きですね。<br>Chinaって感じで。</h2>';
+            } else if (C1 == 5) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 11月 26日<br>5.アルファベット螺旋§</h2><audio controls src="Music/5.mp3"><a href="Music/5.mp3">ダウンロード</a></audio><h2>§はエスです。</h2>';
+            } else if (C1 == 6) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12月 10日<br>6.陽気な神</h2><audio controls src="Music/6.mp3"><a href="Music/6.mp3">ダウンロード</a></audio><h2>何か良く分からんで作ったので<br>曲の構成とか結構ごちゃごちゃです。</h2>';
+            } else if (C1 == 7) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12…月 14…??日<br>7.トラブルシューティング</h2><audio controls src="Music/7.mp3"><a href="Music/7.mp3">ダウンロード</a></audio><h2>マジでこれいつ作ったんだっけなぁ…</h2>';
+            } else if (C1 == 8) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12月 17日<br>8.大決戦</h2><audio controls src="Music/8.mp3"><a href="Music/8.mp3">ダウンロード</a></audio><h2>これは学校の課題で<br>パッと作ったやつですね。<br>没になりましたが。</h2>';
+            } else if (C1 == 9) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12月 20日<br>9.森林配達</h2><audio controls src="Music/9.mp3"><a href="Music/9.mp3">ダウンロード</a></audio><h2>これは学校の課題で作ったやつです。</h2>';
+            } else if (C1 == 10) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12月 22日<br>10.和室トンネル</h2><audio controls src="Music/10.mp3"><a href="Music/10.mp3">ダウンロード</a></audio><h2>The Backroomsに<br>和服着た少女が落ちて来た<br>感じで作ったハズ…</h2>';
+            } else if (C1 == 11) {
+                document.getElementById("B1").innerHTML = '<h2>2022年 12月 25…?日<br>11.大自然</h2><audio controls src="Music/11.mp3"><a href="Music/11.mp3">ダウンロード</a></audio><h2>かなり曲作りが億劫になってた時に作ったので<br>何か音がふにゃふにゃしてます。</h2>';
+            } else if (C1 == 12) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 1月 6日<br>12.跳ねる感情</h2><audio controls src="Music/12.mp3"><a href="Music/12.mp3">ダウンロード</a></audio><h2>ちょっと特殊な音源を使ってます。<br>(重音テトの「ん」って声。)</h2>';
+            } else if (C1 == 13) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 1月 7日<br>13.自然</h2><audio controls src="Music/13.mp3"><a href="Music/13.mp3">ダウンロード</a></audio><h2>どことなく不思議な日みたいな、メルヘンな曲をまた作りたかったんですが<br>どうにもメロディの作り方が分からなくて後半諦めたやつ。</h2>';
+            } else if (C1 == 14) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 1月 21日<br>14.データ消し飛んだ</h2><audio controls src="Music/14.mp3"><a href="Music/14.mp3">ダウンロード</a></audio><h2>作ってた曲めっちゃ良い感じだったのに<br>保存してなくて全部消えました。</h2>';
+            } else if (C1 == 15) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 1月 23日<br>15.フリースタイル俳句</h2><audio controls src="Music/15.mp3"><a href="Music/15.mp3">ダウンロード</a></audio><h2>俳句の授業をやったので、そこからネタを持ってきました。</h2>';
+            } else if (C1 == 16) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 1月 24日<br>16.ホントにそれで良いのかよw</h2><audio controls src="Music/16.mp3"><a href="Music/16.mp3">ダウンロード</a></audio><h2>タイトルが嘲笑されてる様で何か辛い。</h2>';
+            } else if (C1 == 17) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 2月 5日<br>17.都市開発</h2><audio controls src="Music/17.mp3"><a href="Music/17.mp3">ダウンロード</a></audio><h2>何か建物を地道に組み建ててる感じ。</h2>';
+            } else if (C1 == 18) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 2月 19日<br>18.突破不可能な草原</h2><audio controls src="Music/18.mp3"><a href="Music/18.mp3">ダウンロード</a></audio><h2>あ～…メロディが好きじゃ無いなぁ…</h2>';
+            } else if (C1 == 19) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 2月 23日<br>19.Level Reaper</h2><audio controls src="Music/19.mp3"><a href="Music/19.mp3">ダウンロード</a></audio><h2>ちょっと悲しめになりましたね。</h2>';
+            } else if (C1 == 20) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 2月 26日<br>20.暇なゲーム</h2><audio controls src="Music/20.mp3"><a href="Music/20.mp3">ダウンロード</a></audio><h2>ここら辺から似たような<br>曲調ばっかになってくる。</h2>';
+            } else if (C1 == 21) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 3月 27日<br>21.絶望</h2><audio controls src="Music/21.mp3"><a href="Music/21.mp3">ダウンロード</a></audio><h2>ちょっとホラーゲームとかにありそう</h2>';
+            } else if (C1 == 22) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 3月 28…?日<br>22.新しい風</h2><audio controls src="Music/22.mp3"><a href="Music/22.mp3">ダウンロード</a></audio><h2>進級祝い。</h2>';
+            } else if (C1 == 23) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 3月 29日<br>23.スプラッシュ!!!</h2><audio controls src="Music/23.mp3"><a href="Music/23.mp3">ダウンロード</a></audio><h2>とある絵から着装を受けました。</h2>';
+            } else if (C1 == 24) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 3月 31日<br>24.席替え</h2><audio controls src="Music/24.mp3"><a href="Music/24.mp3">ダウンロード</a></audio><h2>席替えした次の日絶対席間違えてた。</h2>';
+            } else if (C1 == 25) {
+                document.getElementById("B1").innerHTML = '<h2>2023年 5月 5日<br>25.私が法律だ！</h2><audio controls src="Music/25.mp3"><a href="Music/24.mp3">ダウンロード</a></audio><h2>まだ完全には出来てないので<br>まぁお試しって事で。</h2>';
+            };
         };
     </script>
 </body>

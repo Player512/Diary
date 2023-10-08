@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {
+            /*幅*/
+            width: 1100px;
+            /*高さ*/
+            height: 500px;
+            /*背景色*/
+            background-color: rgba(0, 0, 0);
+            /*絶対位置指定(relative = 親要素を基準として、それよりも大きいか、小さいか(相対的))*/
+            position: relative;
+            /*上からの位置*/
+            top: 50%;
+            /*左からの位置*/
+            left: 50%;
+            /*中央揃え*/
+            transform: translate(-50%, 50%);
+        }
+
+        .player {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255);
+            position: fixed;
+            top: 0%;
+            left: 0%;
+        }
+
+        .enemyAttack {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0);
+            position: absolute;
+            top: -100%;
+            left: -100%;
+        }
+
+        #playerHP {
+            font-size: 48px;
+            position: fixed;
+            top: -20%;
+            left: 0%;
+        }
+
+        #gameText {
+            font-size: 32px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #displayClearReward {
+            top: 0%;
+            left: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <div class="player"></div>
+        <h1 id="playerHP">HP: 100</h1>
+        <h1 id="gameText">Spaceを押して始める</h1>
+    </div>
+    <div class="enemyAttack"></div>
+    <audio id="34" src="Music/34.mp3"></audio>
+    <audio id="SE1" src="SE/1.ogg"></audio>
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+</body>
+
+</html>

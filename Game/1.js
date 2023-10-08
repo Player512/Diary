@@ -29,6 +29,7 @@ function playAudio() {
 function createEnemyAttack() {
     //もし、isGameActiveがtureだった場合、if関数内を実行
     if (isGameActive) {
+        //enemyAttackの出現数
         const enemyAttack1 = createSingleEnemyAttack();
         displayEnemyAttack(enemyAttack1);
         const enemyAttack2 = createSingleEnemyAttack();

@@ -1,4 +1,4 @@
-let playerHP = 100;
+let playerHP = 10;
 let BPM = 80;
 let Offset = 2.101;
 

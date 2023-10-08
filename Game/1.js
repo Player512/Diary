@@ -8,7 +8,7 @@ const canvas = document.querySelector('.canvas');
 const playerHPElement = document.getElementById('playerHP');
 playerHPElement.innerText = `HP:${playerHP}`;
 let isGameActive = true;
-const audio1 = document.getElementById("34");
+const audio1 = document.getElementById("Music");
 const audio2 = document.getElementById("SE1");
 document.addEventListener('keydown', function (event) {
     if (event.code === 'Space') {
